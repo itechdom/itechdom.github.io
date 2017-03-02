@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "/dist/";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 475);
+/******/ 	return __webpack_require__(__webpack_require__.s = 487);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -16477,7 +16477,7 @@ var _getMuiTheme2 = _interopRequireDefault(_getMuiTheme);
 
 var _colorManipulator = __webpack_require__(71);
 
-var _samAlghanmi = __webpack_require__(470);
+var _samAlghanmi = __webpack_require__(474);
 
 var _samAlghanmi2 = _interopRequireDefault(_samAlghanmi);
 
@@ -16509,11 +16509,11 @@ var _reactTapEventPlugin = __webpack_require__(453);
 
 var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 
-__webpack_require__(472);
+__webpack_require__(483);
 
-__webpack_require__(473);
+__webpack_require__(484);
 
-var _data = __webpack_require__(471);
+var _data = __webpack_require__(482);
 
 var _data2 = _interopRequireDefault(_data);
 
@@ -16722,7 +16722,7 @@ var Home = function Home() {
 
 var cleanObject = function cleanObject(obj) {
     return Object.keys(obj).map(function (key) {
-        if (parseInt(key)) {
+        if (parseInt(Math.ceil(key))) {
             return obj[key];
         }
         return "";
@@ -16746,6 +16746,7 @@ var Skills = function Skills() {
         category: "On the Side",
         ideas: skill["On the Side"].ideas
     }];
+    console.log(skillList);
     return _react2.default.createElement(
         'div',
         { className: 'list' },
@@ -16796,6 +16797,25 @@ var About = function About() {
     );
 };
 
+var Brands = function Brands() {
+    var companyList = _data2.default.ideas.Portfolio.ideas;
+    return _react2.default.createElement(
+        'ul',
+        { className: 'grid center' },
+        cleanObject(companyList).map(function (company, index) {
+            return _react2.default.createElement(
+                'div',
+                { key: index, className: 'grid-item basis-10' },
+                _react2.default.createElement(
+                    _Card.CardMedia,
+                    null,
+                    _react2.default.createElement('img', { style: styles.gridImage, src: __webpack_require__(486)("./" + company.title.split(' ').join('').toLowerCase() + '.png') })
+                )
+            );
+        })
+    );
+};
+
 var Companies = function Companies() {
     var companyList = _data2.default.ideas.Portfolio.ideas;
     //<img style={styles.gridImage} src={require(`../Style/images/${company.title.split(' ').join('').toLowerCase()}.png`)} />
@@ -16825,6 +16845,12 @@ var Portfolio = function Portfolio() {
     return _react2.default.createElement(
         'section',
         null,
+        _react2.default.createElement(
+            'h2',
+            { className: 'text-center capital' },
+            'Brands I had the honor of working with:'
+        ),
+        Brands(),
         Companies()
     );
 };
@@ -24280,7 +24306,7 @@ module.exports = exports['default'];
  */
 
 !function (root, name, definition) {
-  if (typeof module != 'undefined' && module.exports) module.exports = definition();else if (true) __webpack_require__(474)(name, definition);else root[name] = definition();
+  if (typeof module != 'undefined' && module.exports) module.exports = definition();else if (true) __webpack_require__(485)(name, definition);else root[name] = definition();
 }(undefined, 'bowser', function () {
   /**
     * See useragents.js for examples of navigator.userAgent
@@ -43549,7 +43575,7 @@ exports = module.exports = __webpack_require__(132)();
 
 
 // module
-exports.push([module.i, "h3, h4, h5, h6 {\n  font-weight: normal; }\n\n/*-------------\r\n \tGeneral\r\n-------------*/\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nul, nav {\n  list-style: none; }\n\na {\n  text-decoration: none;\n  color: inherit;\n  cursor: pointer;\n  opacity: 0.9; }\n\na:hover {\n  opacity: 1; }\n\na.btn {\n  color: #fff;\n  border-radius: 4px;\n  text-transform: uppercase;\n  background-color: #2196F3;\n  font-weight: 800;\n  text-align: center; }\n\nsection {\n  display: flex;\n  flex-direction: column;\n  padding: 0px 100px; }\n\nsection p {\n  text-align: center;\n  margin-bottom: 35px;\n  padding: 0 20px;\n  line-height: 2;\n  font-size: 1.5em; }\n\n.list {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  flex-direction: column; }\n\n.list-item {\n  padding: 10px;\n  margin: 10px; }\n\n.grid {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap; }\n\n.grid.center {\n  justify-content: center; }\n\n.grid.start {\n  justify-content: flex-start; }\n\n.grid-item {\n  border-radius: 3px;\n  background-clip: content-box;\n  background-size: cover;\n  background-position: center;\n  margin: 10px !important; }\n\n.grid-item.small {\n  flex-basis: 40%; }\n\n@media (max-width: 1000px) {\n  section {\n    padding: 0px 50px; }\n  .grid-item {\n    flex-basis: 100%; } }\n\n@media (max-width: 600px) {\n  section {\n    padding: 0px 30px; } }\n\n/** UTILS\r\n**/\n.bold {\n  font-weight: bold; }\n", ""]);
+exports.push([module.i, "h3, h4, h5, h6 {\n  font-weight: normal; }\n\n/*-------------\r\n \tGeneral\r\n-------------*/\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nul, nav {\n  list-style: none; }\n\na {\n  text-decoration: none;\n  color: inherit;\n  cursor: pointer;\n  opacity: 0.9; }\n\na:hover {\n  opacity: 1; }\n\na.btn {\n  color: #fff;\n  border-radius: 4px;\n  text-transform: uppercase;\n  background-color: #2196F3;\n  font-weight: 800;\n  text-align: center; }\n\nsection {\n  display: flex;\n  flex-direction: column;\n  padding: 0px 100px; }\n\nsection p {\n  text-align: center;\n  margin-bottom: 35px;\n  padding: 0 20px;\n  line-height: 2;\n  font-size: 1.5em; }\n\n.list {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  flex-direction: column; }\n\n.list-item {\n  padding: 10px;\n  margin: 10px; }\n\n.grid {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap; }\n\n.grid.center {\n  justify-content: center; }\n\n.grid.start {\n  justify-content: flex-start; }\n\n.grid-item {\n  border-radius: 3px;\n  background-clip: content-box;\n  background-size: cover;\n  background-position: center;\n  margin: 10px !important; }\n\n.grid-item.small {\n  flex-basis: 40%; }\n\n@media (max-width: 1000px) {\n  section {\n    padding: 0px 50px; }\n  .grid-item {\n    flex-basis: 100%; } }\n\n@media (max-width: 600px) {\n  section {\n    padding: 0px 30px; } }\n\n/** UTILS\r\n**/\n.bold {\n  font-weight: bold; }\n\n.text-center {\n  text-align: center; }\n\n.capital {\n  transform: uppercase; }\n\n.basis-10 {\n  flex-basis: 10%; }\n", ""]);
 
 // exports
 
@@ -43558,10 +43584,76 @@ exports.push([module.i, "h3, h4, h5, h6 {\n  font-weight: normal; }\n\n/*-------
 /* 470 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "4dd9c3c97287bccf9a1c0df1daeb18ac.jpg";
+module.exports = __webpack_require__.p + "10db7630bca9a402173b2df5df0dff7a.png";
 
 /***/ }),
 /* 471 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "eb2c29594aed27e9c406fb34f1197a63.png";
+
+/***/ }),
+/* 472 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "e8aeebc64de7739179989c1bb79e5b8e.png";
+
+/***/ }),
+/* 473 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "e5399c361879f5b7ec7f4000a67500d6.png";
+
+/***/ }),
+/* 474 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "4dd9c3c97287bccf9a1c0df1daeb18ac.jpg";
+
+/***/ }),
+/* 475 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "65d0543cbc5fb640e729d337661ac6b7.png";
+
+/***/ }),
+/* 476 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "b98a5cdc2df13bd094b4c0558f0e3103.png";
+
+/***/ }),
+/* 477 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "e605a0f39561ab056c1e80e728dac736.png";
+
+/***/ }),
+/* 478 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "8d446ada3f42c59d96dce418ebd9df51.png";
+
+/***/ }),
+/* 479 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "bf81a22a65b4fffca5e0c20b5c8f8744.png";
+
+/***/ }),
+/* 480 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "f511962b87fed34d7003d61decddea92.png";
+
+/***/ }),
+/* 481 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "db3f807a3955b007c60b5e7165aea73f.png";
+
+/***/ }),
+/* 482 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -49060,7 +49152,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 472 */
+/* 483 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -49086,7 +49178,7 @@ if(false) {
 }
 
 /***/ }),
-/* 473 */
+/* 484 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -49112,7 +49204,7 @@ if(false) {
 }
 
 /***/ }),
-/* 474 */
+/* 485 */
 /***/ (function(module, exports) {
 
 module.exports = function() {
@@ -49121,7 +49213,41 @@ module.exports = function() {
 
 
 /***/ }),
-/* 475 */
+/* 486 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./amexplenti.png": 470,
+	"./amgen.png": 471,
+	"./landdox.png": 472,
+	"./mwi.png": 473,
+	"./spacex.png": 475,
+	"./zahra-1.png": 476,
+	"./zahra-2.png": 477,
+	"./zahra-3.png": 478,
+	"./zahra-4.png": 479,
+	"./zahra-5.png": 480,
+	"./zahra.png": 481
+};
+function webpackContext(req) {
+	return __webpack_require__(webpackContextResolve(req));
+};
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) // check for number
+		throw new Error("Cannot find module '" + req + "'.");
+	return id;
+};
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = 486;
+
+
+/***/ }),
+/* 487 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
