@@ -16821,11 +16821,11 @@ var Companies = function Companies() {
     //<img style={styles.gridImage} src={require(`../Style/images/${company.title.split(' ').join('').toLowerCase()}.png`)} />
     return _react2.default.createElement(
         'ul',
-        { className: 'grid center' },
+        { className: 'grid' },
         cleanObject(companyList).map(function (company, index) {
             return _react2.default.createElement(
                 _Card.Card,
-                { key: index, className: 'grid-item small' },
+                { key: index, className: 'grid-item' },
                 _react2.default.createElement(_Card.CardTitle, {
                     className: 'bold',
                     title: company.title
@@ -16845,11 +16845,6 @@ var Portfolio = function Portfolio() {
     return _react2.default.createElement(
         'section',
         null,
-        _react2.default.createElement(
-            'h2',
-            { className: 'text-center capital' },
-            'Brands I had the honor of working with:'
-        ),
         Brands(),
         Companies()
     );
@@ -43575,7 +43570,7 @@ exports = module.exports = __webpack_require__(132)();
 
 
 // module
-exports.push([module.i, "h3, h4, h5, h6 {\n  font-weight: normal; }\n\n/*-------------\r\n \tGeneral\r\n-------------*/\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nul, nav {\n  list-style: none; }\n\na {\n  text-decoration: none;\n  color: inherit;\n  cursor: pointer;\n  opacity: 0.9; }\n\na:hover {\n  opacity: 1; }\n\na.btn {\n  color: #fff;\n  border-radius: 4px;\n  text-transform: uppercase;\n  background-color: #2196F3;\n  font-weight: 800;\n  text-align: center; }\n\nsection {\n  display: flex;\n  flex-direction: column;\n  padding: 0px 100px; }\n\nsection p {\n  text-align: center;\n  margin-bottom: 35px;\n  padding: 0 20px;\n  line-height: 2;\n  font-size: 1.5em; }\n\n.list {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  flex-direction: column; }\n\n.list-item {\n  padding: 10px;\n  margin: 10px; }\n\n.grid {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap; }\n\n.grid.center {\n  justify-content: center; }\n\n.grid.start {\n  justify-content: flex-start; }\n\n.grid-item {\n  border-radius: 3px;\n  background-clip: content-box;\n  background-size: cover;\n  background-position: center;\n  margin: 10px !important; }\n\n.grid-item.small {\n  flex-basis: 40%; }\n\n@media (max-width: 1000px) {\n  section {\n    padding: 0px 50px; }\n  .grid-item {\n    flex-basis: 100%; } }\n\n@media (max-width: 600px) {\n  section {\n    padding: 0px 30px; } }\n\n/** UTILS\r\n**/\n.bold {\n  font-weight: bold; }\n\n.text-center {\n  text-align: center; }\n\n.capital {\n  transform: uppercase; }\n\n.basis-10 {\n  flex-basis: 10%; }\n", ""]);
+exports.push([module.i, "h3, h4, h5, h6 {\n  font-weight: normal; }\n\n/*-------------\r\n \tGeneral\r\n-------------*/\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nul, nav {\n  list-style: none; }\n\na {\n  text-decoration: none;\n  color: inherit;\n  cursor: pointer;\n  opacity: 0.9; }\n\na:hover {\n  opacity: 1; }\n\na.btn {\n  color: #fff;\n  border-radius: 4px;\n  text-transform: uppercase;\n  background-color: #2196F3;\n  font-weight: 800;\n  text-align: center; }\n\nsection {\n  display: flex;\n  flex-direction: column;\n  padding: 0px 100px; }\n\nsection p {\n  text-align: center;\n  margin-bottom: 35px;\n  padding: 0 20px;\n  line-height: 2;\n  font-size: 1.5em; }\n\n.list {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  flex-direction: column; }\n\n.list-item {\n  padding: 10px;\n  margin: 10px; }\n\n.grid {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap; }\n\n.grid.center {\n  justify-content: center; }\n\n.grid.start {\n  justify-content: flex-start; }\n\n.grid-item {\n  border-radius: 3px;\n  background-clip: content-box;\n  background-size: cover;\n  background-position: center;\n  margin: 10px !important; }\n\n.grid-item.small {\n  flex-basis: 40%; }\n\n@media (max-width: 1000px) {\n  section {\n    padding: 0px 0px; }\n  section p {\n    text-align: left; } }\n\n@media (max-width: 600px) {\n  section {\n    padding: 0px 0px; }\n  section p {\n    text-align: left; } }\n\n/** UTILS\r\n**/\n.bold {\n  font-weight: bold; }\n\n.text-center {\n  text-align: center; }\n\n.capital {\n  transform: uppercase; }\n\n.basis-10 {\n  flex-basis: 10%; }\n", ""]);
 
 // exports
 
